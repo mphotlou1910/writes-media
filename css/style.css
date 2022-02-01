@@ -1,0 +1,1713 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Spectral:wght@300;400;500;600;700;800&display=swap');
+
+/********** Navbar ***************/
+nav{
+  background: transparent;
+  position:relative;
+  
+}
+
+#logo{
+  font-size:38px;
+  font-weight:700;
+  color:#000;
+}
+
+.nav-container{
+  max-width:1270px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px;
+}
+
+
+
+nav ul{
+  list-style:none;
+}
+nav li {
+    display:inline-block;
+}
+nav li a{
+      display:block;
+      padding:10px 15px;
+      text-decoration:none;
+      color:#101920;
+      transition:400ms;
+      text-transform:uppercase;
+      font-weight:500;
+      border:1px solid transparent;
+    }
+
+#nav-toggler{
+   
+  display:none;
+}
+
+#nav-toggler .bar{
+    display:block;
+    width:40px;
+    height:6px;
+    background:rgba(0, 0, 0, 0.6);
+    margin:8px;
+    transition:300ms;
+  }
+
+nav .mobnav-bg{
+  /* position:absolute;
+     top:0; 
+     right:0; */
+  width:100%;
+  height:100%;
+  background:#fff;
+  height:100vh;
+  display:none;
+}
+
+nav .mobnav-wrapper li{
+  display:block;
+}
+
+.mobnav-wrapper a{
+  text-align:center;
+}
+
+
+.mobnav-wrapper {
+	padding: 35px 0;
+}
+
+@media (max-width:768px){
+  .nav-wrapper{
+    display:none;
+  }
+  
+  #nav-toggler{
+    display:block;
+  }
+}
+
+@media (min-width:768px){
+  .mobnav-bg.menu-open{
+    display:none !important;
+  }
+}
+
+.menu-open{
+  display:block !important;
+}
+
+
+.nav-toggle .bar:first-child {
+	transform: rotate(-50deg) translateY(2px);
+}
+
+.nav-toggle .bar:nth-child(2){
+  transform:translateX(-20px);
+  opacity:0;
+  
+}
+
+.nav-toggle .bar:last-child {
+	transform: rotate(50deg) translateY(-2px);
+}
+
+  
+  /************ End of Navbar **********************/
+  
+  
+   /* ==========================================================================
+      Start of custom Webflow CSS
+      ========================================================================== */
+      body {
+        font-family: Manrope, sans-serif;
+        color: rgba(51, 51, 51, 0.6);
+        font-size: 1rem;
+        line-height: 1.875rem;
+      }
+      
+      h1 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: Spectral, sans-serif;
+        color: #1a2250;
+        font-size: 4rem;
+        line-height: 4.5rem;
+        font-weight: 700;
+      }
+      
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: Spectral, sans-serif;
+        color: #1a2250;
+        font-size: 3.875rem;
+        line-height: 1.375rem;
+        font-weight: 700;
+      }
+      
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: Spectral, sans-serif;
+        color: #1a2250;
+        font-size: 1.5rem;
+        line-height: 2.375rem;
+        font-weight: 700;
+      }
+      
+      p {
+        margin-bottom: 10px;
+      }
+      
+      a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+      }
+      
+      .container {
+        max-width: 1160px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      
+      .container.about-flexbox {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+      }
+      
+      .container.contact-flexbox {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+      }
+      
+      .container.flexbox {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      
+      .container.disclaimer {
+        border-top: 1px solid rgba(0, 0, 0, 0.4);
+      }
+      
+      .container.about-flexbox {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      
+      .button {
+        margin-right: 10px;
+        padding: 10px 30px;
+        background-color: #fbbe3d;
+        -webkit-transition: all 300ms ease, -webkit-transform 300ms ease;
+        transition: all 300ms ease, -webkit-transform 300ms ease;
+        transition: transform 300ms ease, all 300ms ease;
+        transition: transform 300ms ease, all 300ms ease, -webkit-transform 300ms ease;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+      }
+      
+      .button:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      
+      .button.ghost {
+        margin-top: 0px;
+        margin-left: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #fbbe3d;
+        background-color: transparent;
+        color: #fbbe3d;
+      }
+      
+      .services-text {
+        padding-top: 10px;
+        color: rgba(51, 51, 51, 0.8);
+        font-size: 1rem;
+        font-weight: 800;
+      }
+      
+      .nav-link {
+        padding-right: 10px;
+        padding-left: 10px;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      
+      .navbar {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: auto;
+        z-index: 1000;
+        width: 100vw;
+        background-color: transparent;
+      }
+      
+      .brand {
+        position: absolute;
+        left: 10%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 562px;
+        margin-top: 10px;
+        margin-left: -55px;
+      }
+      
+      .mtb-40 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+      
+      .mtb-20 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      
+      .white {
+        color: #fff;
+        line-height: 4.5rem;
+        text-align: center;
+      }
+      
+      .white.center {
+        text-align: center;
+      }
+      
+      .white.center.mt-200 {
+        margin-top: 200px;
+      }
+      
+      .card-wrap.card-flexbox {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      
+      .star-rating {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      
+      .card {
+        width: 330px;
+        margin: 0px 20px 20px;
+        padding: 20px 39px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.5);
+        -webkit-transition: -webkit-transform 300ms ease;
+        transition: -webkit-transform 300ms ease;
+        transition: transform 300ms ease;
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+        text-align: center;
+      }
+      
+      .card:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      
+      .musanathi-picture {
+        max-width: 40%;
+        margin-left: 30px;
+        border-bottom: 15px solid #daa520;
+        border-top-left-radius: 600px;
+        border-bottom-left-radius: 600px;
+        border-bottom-right-radius: 600px;
+      }
+      
+      .about-content {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 50%;
+        margin-top: 60px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      
+      .musanathi-pic {
+        border-bottom: 1px solid #daa520;
+        border-radius: 600px 0px 600px 600px;
+      }
+      
+      .reviewer {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 20px;
+      }
+      
+      .reviewer-name {
+        padding-left: 20px;
+      }
+      
+      .subsection {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: #1a2250;
+        box-shadow: 1px 1px 12px 0 rgba(0, 0, 0, 0.4);
+      }
+      
+      .buttons {
+        padding-bottom: 20px;
+      }
+      
+      .icon {
+        width: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+      
+      .about-card {
+        width: 250px;
+        -webkit-transition: -webkit-transform 300ms ease;
+        transition: -webkit-transform 300ms ease;
+        transition: transform 300ms ease;
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+        text-align: center;
+      }
+      
+      .about-card:hover {
+        -webkit-transform: translate(0px, -3px);
+        -ms-transform: translate(0px, -3px);
+        transform: translate(0px, -3px);
+      }
+      
+      .utility-page-wrap {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        max-height: 100%;
+        max-width: 100%;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      
+      .utility-page-content {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 260px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .utility-page-form {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+      }
+      
+      .services-section {
+        position: relative;
+        z-index: 10;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 1180px;
+        margin: -60px auto -140px;
+        padding-left: 0px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        grid-auto-columns: 1fr;
+        -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        background-color: #fff;
+        box-shadow: 6px 6px 16px 6px rgba(0, 0, 0, 0.3);
+      }
+      
+      .service-card {
+        width: 100%;
+        max-width: 16.666666666666668%;
+        padding: 45px 40px;
+        -webkit-transform: translate(0px, -2px);
+        -ms-transform: translate(0px, -2px);
+        transform: translate(0px, -2px);
+        -webkit-transition: -webkit-transform 300ms ease;
+        transition: -webkit-transform 300ms ease;
+        transition: transform 300ms ease;
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+        text-align: center;
+      }
+      
+      .service-card:hover {
+        -webkit-transform: translate(0px, -3px) translate(0px, -2px);
+        -ms-transform: translate(0px, -3px) translate(0px, -2px);
+        transform: translate(0px, -3px) translate(0px, -2px);
+      }
+      
+      .services-icon {
+        min-width: 45px;
+      }
+      
+      .nav-link {
+        color: #000;
+      }
+      
+      .nav-link:hover {
+        color: #daa520;
+      }
+      
+      .footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        text-align: center;
+      }
+      
+      .contact {
+        margin-top: 20px;
+        margin-bottom: 60px;
+      }
+      
+      .contact.alternate {
+        padding: 60px 20px;
+        background-color: #1a2250;
+      }
+      
+      .contact.alternate.section-spacer {
+        margin-top: 0px;
+      }
+      
+      .team-card {
+        width: 33.3%;
+        padding-left: 10px;
+        text-align: left;
+      }
+      
+      .middle-team-card {
+        width: 33.3%;
+        border-right: 1px solid rgba(0, 0, 0, 0.4);
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        text-align: center;
+      }
+      
+      .team-info {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      
+      .team-info.mtb-40 {
+        max-width: 60%;
+      }
+      
+      .nav-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 1300px;
+        margin-right: auto;
+        margin-left: auto;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      
+      .hero-logo {
+        margin-left: 10px;
+        padding-top: 20px;
+      }
+      
+      .team-info-heading {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      
+      .button-text {
+        margin-bottom: 0px;
+        color: #fff;
+      }
+      
+      .button-text-alternate {
+        margin-bottom: 0px;
+      }
+      
+      .review-highlight {
+        text-align: center;
+      }
+      
+      .nav-menu.nav-list {
+        width: 45%;
+        min-width: 550px;
+        margin-left: 0px;
+        padding-top: 25px;
+        padding-right: 0px;
+        -webkit-box-align: center;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: center;
+        align-items: flex-start;
+      }
+      
+      .social-wrap {
+        width: 60px;
+      }
+      
+      .author-pic {
+        border-radius: 60px;
+      }
+      
+      .link-2 {
+        color: grey;
+        font-style: normal;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      
+      .text-block-4 {
+        text-decoration: none;
+      }
+      
+      .image-2 {
+        margin-left: 15px;
+        font-size: 0.5rem;
+      }
+      
+      .nav-brand {
+        max-width: 50%;
+      }
+      
+      .mb-40 {
+        margin-bottom: 40px;
+      }
+      
+      .heading {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 0px;
+        padding-top: 0px;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        text-align: left;
+      }
+      
+      .hero-2 {
+        display: block;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      
+      .hero-section {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 0px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      
+      .hero-image {
+        width: 100%;
+        height: 100vh;
+        max-width: 100%;
+      }
+      
+      .column-3 {
+        background-image: url("https://uploads-ssl.webflow.com/61aec5965cf51e6208a335eb/61b464c13af21432ecafdce1_Hero.png");
+        background-position: 0px 0px;
+        background-size: cover;
+      }
+      
+      .column-4 {
+        margin-top: 140px;
+        padding-left: 50px;
+      }
+      
+      .form-section {
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+      
+      .textarea {
+        padding-bottom: 150px;
+      }
+      
+      .text-field {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      
+      .text-field-2 {
+        padding-top: 10px;
+      }
+      
+      @media screen and (min-width: 1920px) {
+        h1 {
+          margin-bottom: 20px;
+          font-size: 5rem;
+          line-height: 5.5rem;
+        }
+      
+        h2 {
+          font-size: 4.5rem;
+        }
+      
+        h3 {
+          font-size: 2rem;
+        }
+      
+        p {
+          font-size: 1.35rem;
+          line-height: 2.25rem;
+        }
+      
+        a {
+          font-size: 1.25rem;
+        }
+      
+        a.w--current {
+          font-weight: 700;
+        }
+      
+        .container {
+          max-width: 1800px;
+        }
+      
+        .container.about-flexbox {
+          max-width: 1600px;
+        }
+      
+        .button {
+          font-size: 0.8rem;
+        }
+      
+        .services-text {
+          padding-top: 20px;
+          font-size: 1.5rem;
+        }
+      
+        .nav-link {
+          padding-right: 20px;
+          padding-left: 20px;
+          font-size: 1.5rem;
+        }
+      
+        .mtb-20 {
+          margin-bottom: 40px;
+          font-size: 1.5rem;
+          line-height: 2.6rem;
+        }
+      
+        .white {
+          padding-right: 60px;
+          padding-left: 60px;
+          font-size: 5rem;
+          line-height: 5.5rem;
+        }
+      
+        .white.center.mt-200 {
+          font-size: 5rem;
+          line-height: 5.5rem;
+        }
+      
+        .card-wrap.card-flexbox {
+          -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+          justify-content: space-around;
+        }
+      
+        .card {
+          width: 500px;
+          box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.5);
+        }
+      
+        .musanathi-picture {
+          margin-left: 0px;
+        }
+      
+        .subsection {
+          max-width: 100%;
+        }
+      
+        .socials.mtb-40 {
+          margin-bottom: 40px;
+        }
+      
+        .icon {
+          width: 45px;
+        }
+      
+        .services-section {
+          max-width: 1800px;
+        }
+      
+        .services-icon {
+          min-width: 70px;
+        }
+      
+        .contact.alternate {
+          padding-top: 140px;
+        }
+      
+        .contact.alternate.section-spacer {
+          padding-top: 60px;
+        }
+      
+        .nav-container {
+          max-width: 1600px;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+      
+        .hero-logo {
+          font-size: 2rem;
+        }
+      
+        .nav-menu {
+          width: 50%;
+        }
+      
+        .nav-brand {
+          max-width: 100%;
+        }
+      
+        .mb-40 {
+          font-size: 5rem;
+          line-height: 5.5rem;
+        }
+      
+        .heading {
+          margin-bottom: 30px;
+          font-size: 7rem;
+          line-height: 7.8rem;
+        }
+      
+        .column-4 {
+          margin-top: 280px;
+          padding-left: 140px;
+        }
+      
+        .paragraph {
+          font-size: 1.5rem;
+        }
+      
+        .heading-2 {
+          font-size: 2.5rem;
+        }
+      
+        .heading-3 {
+          font-size: 2.5rem;
+        }
+      
+        .heading-4 {
+          font-size: 2.5rem;
+        }
+      
+        .paragraph-2 {
+          font-size: 1.5rem;
+        }
+      
+        .paragraph-3 {
+          font-size: 1.5rem;
+        }
+      
+        .paragraph-4 {
+          font-size: 1.5rem;
+        }
+      }
+      
+      @media screen and (max-width: 991px) {
+        body {
+          font-size: 0.875rem;
+        }
+      
+        h1 {
+          font-size: 4rem;
+          text-align: center;
+        }
+      
+        h2 {
+          font-size: 3rem;
+          line-height: 3.5rem;
+        }
+      
+        .button.ghost {
+          margin-top: 20px;
+        }
+      
+        .navbar {
+          left: 0%;
+          top: 0%;
+          right: 0%;
+          bottom: auto;
+          box-shadow: 0 0 5px 0.5px #000;
+        }
+      
+        .brand {
+          left: 3%;
+          width: 50%;
+          margin-top: 20px;
+          margin-left: -20px;
+        }
+      
+        .menu-button {
+          margin-top: 20px;
+          margin-right: 20px;
+        }
+      
+        .menu-button.w--open {
+          background-color: hsla(0, 0%, 100%, 0.2);
+        }
+      
+        .mtb-20 {
+          margin-bottom: 20px;
+        }
+      
+        .white {
+          margin-top: 10px;
+          font-size: 2.5rem;
+          line-height: 4rem;
+        }
+      
+        .card-wrap.card-flexbox {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+      
+        .card {
+          margin-right: 10px;
+          margin-left: 10px;
+          padding: 10px 20px;
+        }
+      
+        .musanathi-pic {
+          position: static;
+        }
+      
+        .subsection {
+          padding: 30px 40px;
+        }
+      
+        .buttons {
+          text-align: center;
+        }
+      
+        .services-section {
+          max-width: 700px;
+          margin-top: -13px;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: stretch;
+          -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+          align-items: stretch;
+        }
+      
+        .service-card {
+          max-width: 33.33%;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      
+        .nav-menu {
+          background-color: #fff;
+        }
+      
+        .nav-link {
+          color: #1a2250;
+          text-align: center;
+        }
+      
+        .footer {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      
+        .contact {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      
+        .contact.alternate {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      
+        .contact.alternate.section-spacer {
+          margin-bottom: 0px;
+          padding-bottom: 20px;
+        }
+      
+        .team-info.mtb-40 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      
+        .nav-container {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      
+        .nav-menu {
+          width: 100%;
+          min-width: 0px;
+          padding-right: 0px;
+        }
+      
+        .image-2 {
+          margin-left: 50px;
+        }
+      
+        .nav-brand {
+          max-width: 80%;
+        }
+      
+        .mb-40 {
+          margin-bottom: 20px;
+        }
+      
+        .heading {
+          font-size: 2.8rem;
+          line-height: 3.8rem;
+        }
+      
+        .column-4 {
+          margin-top: 60px;
+          padding-left: 40px;
+        }
+      
+        .hero {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          margin-top: 140px;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+        }
+      
+        .form-section {
+          padding-right: 60px;
+          padding-left: 60px;
+        }
+
+        body {
+            overflow-x: hidden;
+          }
+          .nav-list {
+            position: absolute;
+            top: 20vh;
+            right: 0;
+            width: 80vw;
+            height: 90vh;
+            background: #fff;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in;
+          }
+          .nav-list a {
+            margin-left: 0;
+            opacity: 0;
+            color: rgba(0, 0, 0, 0.6);
+          }
+
+          .nav-list a:hover {
+            color: #daa520;
+          }
+
+          .mobile-menu {
+            display: block;
+          }
+        }
+        
+        .nav-list.active {
+          transform: translateX(0);
+        }
+        
+        @keyframes navLinkFade {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+      }
+      
+      @media screen and (max-width: 767px) {
+        body {
+          margin-left: 0px;
+        }
+      
+        h1 {
+          font-size: 3.5rem;
+        }
+      
+        .container.about-flexbox {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          text-align: center;
+        }
+      
+        .container.contact-flexbox {
+          -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+          justify-content: space-around;
+        }
+      
+        .container.about-flexbox {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          text-align: center;
+        }
+      
+        .services-text {
+          font-size: 0.75rem;
+        }
+      
+        .brand {
+          width: 70%;
+          margin-left: 10%;
+        }
+      
+        .mtb-20 {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      
+        .white {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          font-size: 2rem;
+        }
+      
+        .white.center {
+          font-size: 2rem;
+        }
+      
+        .card-wrap.card-flexbox {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      
+        .card {
+          width: 310px;
+          margin-right: 0px;
+          margin-left: 0px;
+        }
+      
+        .musanathi-picture {
+          width: 100%;
+          max-width: 60%;
+        }
+      
+        .about-content {
+          width: 100%;
+          margin-top: 40px;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      
+        .reviewer {
+          -webkit-align-self: center;
+          -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
+        }
+      
+        .subsection {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      
+        .socials.mtb-40 {
+          margin-top: 10px;
+        }
+      
+        .buttons {
+          font-size: 0.7rem;
+        }
+      
+        .icon {
+          width: 25px;
+        }
+      
+        .services-section {
+          max-width: 500px;
+          margin-top: 8px;
+          margin-bottom: -231px;
+          -webkit-align-content: flex-end;
+          -ms-flex-line-pack: end;
+          align-content: flex-end;
+        }
+      
+        .service-card {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      
+        .services-icon {
+          min-width: 40px;
+        }
+      
+        .footer {
+          padding: 40px 20px;
+        }
+      
+        .contact {
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+      
+        .contact.alternate {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      
+        .team-card {
+          width: 33.3%;
+          padding-right: 30px;
+          padding-left: 20px;
+        }
+      
+        .middle-team-card {
+          width: 33.3%;
+          padding-left: 20px;
+          border-right: 1px solid rgba(0, 0, 0, 0.4);
+          border-left: 1px solid rgba(0, 0, 0, 0.4);
+        }
+      
+        .team-info {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+        }
+      
+        .team-info.mtb-40 {
+          max-width: 100%;
+        }
+      
+        .button-text {
+          font-size: 0.7rem;
+        }
+      
+        .button-text-alternate {
+          font-size: 0.7rem;
+        }
+      
+        .social-wrap {
+          width: 50px;
+        }
+      
+        .heading {
+          font-size: 3rem;
+          line-height: 4rem;
+          text-align: center;
+        }
+      
+        .hero-2 {
+          padding: 40px 20px;
+        }
+      
+        .hero-image {
+          height: 400px;
+        }
+      
+        .column-3 {
+          margin-top: 150px;
+        }
+      
+        .column-4 {
+          margin-top: 20px;
+        }
+      
+        .hero {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          margin-top: 10px;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+          -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+        }
+      
+        .form-section {
+          padding-right: 50px;
+          padding-left: 50px;
+        }
+      
+        .container-2 {
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+   
+        body {
+         overflow-x: hidden;
+       }
+   
+    /*   .nav-list {
+         position: absolute;
+         top: 6vh;
+         right: 0;
+         width: 100vw;
+         height: 80vh;
+         background: #fff;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-around;
+         transform: translateX(100%);
+         transition: transform 0.3s ease-in;
+       } */
+      }
+      
+      @media screen and (max-width: 479px) {
+        h1 {
+          font-size: 2.5rem;
+          line-height: 3rem;
+          font-style: normal;
+        }
+      
+        h2 {
+          font-size: 2.5rem;
+          line-height: 2rem;
+        }
+      
+        .container.contact-flexbox {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+      
+        .button {
+          overflow: visible;
+          margin-top: 10px;
+          margin-left: 10px;
+          padding-right: 10px;
+          padding-left: 10px;
+          font-size: 0.65rem;
+          line-height: 1rem;
+        }
+      
+        .button.ghost {
+          margin-top: 20px;
+        }
+      
+        .navbar {
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-align: stretch;
+          -webkit-align-items: stretch;
+          -ms-flex-align: stretch;
+          align-items: stretch;
+        }
+      
+        .brand {
+          display: block;
+          margin-top: 20px;
+          margin-left: 0%;
+        }
+      
+        .menu-button {
+          margin-top: 40px;
+          margin-right: 10px;
+          padding-top: 30px;
+          padding-bottom: 10px;
+        }
+      
+        .mtb-20 {
+          margin-top: 10px;
+          margin-bottom: 0px;
+          padding-right: 10px;
+          padding-bottom: 0px;
+          padding-left: 10px;
+          font-size: 0.8rem;
+          line-height: 1.7rem;
+          text-align: center;
+        }
+      
+        .white {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+          text-align: center;
+        }
+      
+        .white.center {
+          margin-top: 10px;
+        }
+      
+        .white.center.mt-200 {
+          margin-top: 120px;
+        }
+      
+        .card {
+          width: auto;
+        }
+      
+        .musanathi-pic {
+          padding-left: 0px;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+        }
+      
+        .subsection {
+          padding: 30px 20px;
+        }
+      
+        .socials.mtb-40 {
+          margin-top: 20px;
+        }
+      
+        .services-section {
+          margin-right: 20px;
+          margin-bottom: -286px;
+          margin-left: 20px;
+        }
+      
+        .service-card {
+          max-width: 50%;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      
+        .footer {
+          padding-right: 20px;
+          padding-left: 20px;
+          text-align: center;
+        }
+      
+        .contact {
+          margin-top: 60px;
+          margin-bottom: 10px;
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+      
+        .contact.alternate.section-spacer {
+          margin-bottom: 0px;
+          padding-top: 220px;
+          padding-bottom: 20px;
+        }
+      
+        .main {
+          padding-bottom: 10px;
+        }
+      
+        .team-info.mtb-40 {
+          margin-top: 20px;
+        }
+      
+        .nav-container {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+      
+        .hero-logo {
+          display: block;
+          margin-left: 0px;
+          padding-top: 20px;
+        }
+      
+        .image-2 {
+          display: block;
+          margin-bottom: 0px;
+          margin-left: 35px;
+          padding-bottom: 0px;
+        }
+      
+        .icon-2 {
+          margin-top: 20px;
+          margin-bottom: 0px;
+        }
+      
+        .nav-brand {
+          padding-left: 0px;
+        }
+      
+        .mb-40 {
+          margin-top: 0px;
+          margin-bottom: 15px;
+          font-size: 2rem;
+        }
+      
+        .heading {
+          margin-top: 0px;
+          font-size: 2.5rem;
+          text-align: center;
+        }
+      
+        .hero-image {
+          height: 350px;
+        }
+      
+        .column-3 {
+          margin-top: 160px;
+        }
+      
+        .column-4 {
+          margin-top: 20px;
+          padding-left: 10px;
+        }
+      
+        .hero {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          margin-top: 10px;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+          -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+          -webkit-box-ordinal-group: 2;
+          -webkit-order: 1;
+          -ms-flex-order: 1;
+          order: 1;
+        }
+      
+        .paragraph {
+          margin-bottom: 0px;
+        }
+      
+        .form-section {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+      
+        .header {
+          margin: 20px 5px;
+        }
+      
+        .container-2 {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+
+        .nav-list {
+          position: absolute;
+          top: 20vh;
+          right: 0;
+          width: 80vw;
+          height: 55vh;
+          background: #fff;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in;
+          overflow-x: hidden;
+        }
+      }
+      
+      #w-node-seervice-card {
+        -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+      }
